@@ -1,11 +1,21 @@
 {
   "name": "iso-log",
   "version": "0.0.1",
-  "description": "",
+  "description": "An isomorphic logger with sugar on top.",
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/kengoldfarb/iso-log/"
+	},
+	"homepage": "https://github.com/kengoldfarb/iso-log/",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo 'No tests (yet)'"
   },
   "author": "Ken Goldfarb",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "source-map": "^0.5.6",
+    "superagent": "^3.5.2"
+  }
 }
