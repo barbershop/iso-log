@@ -56,8 +56,8 @@ module.exports = class Log {
 			}
 		};
 
-		this.trace = true;
-		this.sourcemaps = true;
+		this.useTrace = true;
+		this.useSourcemaps = true;
 		this.sources = [];
 		this.sourceMaps = [];
 		this.originalPositionQueue = [];
@@ -71,15 +71,15 @@ module.exports = class Log {
 		}
 
 		if (options.trace === false) {
-			this.trace = false;
+			this.useTrace = false;
 		} else {
-			this.trace = true;
+			this.useTrace = true;
 		}
 
 		if (options.sourcemaps === false) {
-			this.trace = false;
+			this.useTrace = false;
 		} else {
-			this.trace = true;
+			this.useTrace = true;
 		}
 	}
 
@@ -242,7 +242,7 @@ module.exports = class Log {
 
 	getLine() {
 		return new Promise(resolve => {
-			if (!this.trace) {
+			if (!this.useTrace) {
 				resolve();
 			}
 
@@ -271,7 +271,7 @@ module.exports = class Log {
 						const lineNumber = matches2[4];
 						const position = matches2[5];
 
-						if (!this.sourcemaps) {
+						if (!this.useSourcemaps) {
 							// Do not try to resolve from sourcemap.  Just use
 							callerFunc = `${sourceFile}:${lineNumber}:}`;
 							return resolve(callerFunc);

@@ -34,8 +34,8 @@ yarn add iso-log
 const log = require('iso-log');
 log.setOptions({
 	level: 'debug',
-	trace: true,
-	sourcemaps: true
+	useTrace: true,
+	useSourcemaps: true
 });
 
 log.debug('All set!');
@@ -58,9 +58,9 @@ error
 
 If the level specified is ```info```, then ```info```, ```warn```, and ```error``` logs would be written to the console.  ```trace``` and ```debug``` logs would NOT be written to the console.
 
-```trace``` - Whether to run a trace which will add the file and line number.  Default: true
+```useTrace``` - Whether to run a trace which will add the file and line number.  Default: true
 
-```sourcemaps``` - Whether to try to resolve the original file and line number.  Will look for the sourcemap in the corresponding ```.map``` file.  For example, ```/some/js/file.js.map```.  Default: true
+```useSourcemaps``` - Whether to try to resolve the original file and line number.  Will look for the sourcemap in the corresponding ```.map``` file.  For example, ```/some/js/file.js.map```.  Default: true
 
 ### Logging Examples
 
