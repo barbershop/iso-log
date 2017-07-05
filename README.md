@@ -10,6 +10,18 @@ And in terminal:
 
 ![Terminal](https://raw.githubusercontent.com/kengoldfarb/iso-log/master/screenshots/terminal.png)
 
+### Features
+
+* Works both client and server side
+
+* Log levels
+
+* Outputs logs using native ```console``` methods
+
+* Trace log statements to files and lines
+
+* Sourcemap support
+
 ## Installation
 
 ```
