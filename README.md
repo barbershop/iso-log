@@ -79,3 +79,21 @@ log.fatal('log at level error'); // alias of 'error'
 log.debug({some: 'object here'});
 log.debug('multiple things', 'getting logged here', {some: 'object here'});
 ```
+
+### Sourcemaps and Webpack
+
+For source maps to properly work you'll need to make sure you're generating them (with the original source info).  If you're using webpack you can add this to your config:
+
+```javascript
+{
+	devtool: 'cheap-module-source-map';
+}
+```
+
+If you're using webpack and receive a ```Module not found: Error: Can't resolve 'fs'```, just add the following to your webpack config:
+
+```javascript
+node: {
+	fs: 'empty'
+};
+```

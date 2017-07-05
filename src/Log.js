@@ -70,13 +70,13 @@ module.exports = class Log {
 			this.setLevel(options.level);
 		}
 
-		if (options.trace === false) {
+		if (options.useTrace === false) {
 			this.useTrace = false;
 		} else {
 			this.useTrace = true;
 		}
 
-		if (options.sourcemaps === false) {
+		if (options.useTrace === false) {
 			this.useTrace = false;
 		} else {
 			this.useTrace = true;
