@@ -27,28 +27,28 @@ module.exports = class Log {
 				bgHexFallBack: null
 			},
 			log: {
-				i: 0,
+				i: 2,
 				hex: '#000000',
 				hexFallBack: 'black',
 				bgHex: null,
 				bgHexFallBack: null
 			},
 			info: {
-				i: 2,
+				i: 3,
 				hex: '#0033cc',
 				hexFallBack: 'cyan',
 				bgHex: null,
 				bgHexFallBack: null
 			},
 			warn: {
-				i: 3,
+				i: 4,
 				hex: '#ff6600',
 				hexFallBack: 'red',
 				bgHex: null,
 				bgHexFallBack: null
 			},
 			error: {
-				i: 4,
+				i: 5,
 				hex: '#cc3300',
 				hexFallBack: 'red',
 				bgHex: null,
