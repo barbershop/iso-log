@@ -16,7 +16,9 @@ log.setOptions({
 	level: 'debug',
 	trace: true,
 	sourcemaps: true
-})
+});
+
+log.debug('All set!');
 ```
 
 ### Options
