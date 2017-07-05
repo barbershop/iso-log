@@ -2,6 +2,14 @@
 
 An isomorphic logger with sugar on top.
 
+In browser console:
+
+![Console](https://raw.githubusercontent.com/kengoldfarb/iso-log/master/screenshots/console.png)
+
+And in terminal:
+
+![Terminal](https://raw.githubusercontent.com/kengoldfarb/iso-log/master/screenshots/terminal.png)
+
 ## Installation
 
 ```
@@ -59,9 +67,3 @@ log.fatal('log at level error'); // alias of 'error'
 log.debug({some: 'object here'});
 log.debug('multiple things', 'getting logged here', {some: 'object here'});
 ```
-
-### Screenshots
-
-![Console](https://raw.githubusercontent.com/kengoldfarb/iso-log/master/screenshots/console.png)
-
-![Terminal](https://raw.githubusercontent.com/kengoldfarb/iso-log/master/screenshots/terminal.png)
