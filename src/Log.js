@@ -118,6 +118,8 @@ module.exports = class Log {
 				}
 			}
 
+			const now = this.getDatetimeString();
+
 			const thingType = typeof thingToLog;
 			this.getLine()
 				.then(callerFunc => {
@@ -138,8 +140,8 @@ module.exports = class Log {
 					}
 
 					const aboutStr = callerFunc
-						? `(${level.toUpperCase()} | ${callerFunc} | ${thingType}): `
-						: `(${level.toUpperCase()} | ${thingType}): `;
+						? `(${level.toUpperCase()} | ${now} | ${callerFunc} | ${thingType}): `
+						: `(${level.toUpperCase()} | ${now} | ${thingType}): `;
 
 					const colorizedLevel = this.colorize(level, aboutStr);
 
@@ -169,6 +171,35 @@ module.exports = class Log {
 		} else {
 			// console.log('**** LOG LEVEL NOT MET');
 		}
+	}
+
+	getDatetimeString() {
+		const now = new Date();
+		const year = now.getFullYear();
+		let month = now.getMonth() + 1;
+		if (month < 10) {
+			month = '0' + month;
+		}
+		let day = now.getDate() + 1;
+		if (day < 10) {
+			day = '0' + day;
+		}
+		let hour = now.getHours();
+		if (hour < 10) {
+			hour = '0' + hour;
+		}
+		let minute = now.getHours();
+		if (minute < 10) {
+			minute = '0' + minute;
+		}
+		let second = now.getSeconds();
+		if (second < 10) {
+			second = '0' + second;
+		}
+		const millisecond = now.getMilliseconds();
+		const nowStr = `${year}-${month}-${day} ${hour}:${minute}:${second}:${millisecond}`;
+
+		return nowStr;
 	}
 
 	colorize(level, str, bold) {
