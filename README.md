@@ -52,7 +52,7 @@ If the level specified is ```info```, then ```info```, ```warn```, and ```error`
 
 ### Logging Examples
 
-```
+```javascript
 log.trace('log at level trace');
 log.debug('log at level debug');
 log.log('log at level log');
