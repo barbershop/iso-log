@@ -1,12 +1,12 @@
 {
   "name": "iso-log",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "An isomorphic logger with sugar on top.",
   "repository": {
 		"type": "git",
-		"url": "https://github.com/kengoldfarb/iso-log/"
+		"url": "https://github.com/barbershop/iso-log"
 	},
-	"homepage": "https://github.com/kengoldfarb/iso-log/",
+	"homepage": "https://github.com/barbershop/iso-log",
   "main": "index.js",
   "scripts": {
     "test": "echo 'No tests (yet)'"
