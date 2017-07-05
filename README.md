@@ -21,7 +21,7 @@ log.setOptions({
 
 ### Options
 
-#### ```level``` - The log level to use.  Default: 'debug'
+```level``` - The log level to use.  Default: 'debug'
 
 Valid levels are:
 
@@ -36,9 +36,9 @@ error
 
 If the level specified is ```info```, then ```info```, ```warn```, and ```error``` logs would be written to the console.  ```trace``` and ```debug``` logs would NOT be written to the console.
 
-#### ```trace``` - Whether to run a trace which will add the file and line number.  Default: true
+```trace``` - Whether to run a trace which will add the file and line number.  Default: true
 
-#### ```sourcemaps``` - Whether to try to resolve the original file and line number.  Will look for the sourcemap in the corresponding ```.map``` file.  For example, ```/some/js/file.js.map```.  Default: true
+```sourcemaps``` - Whether to try to resolve the original file and line number.  Will look for the sourcemap in the corresponding ```.map``` file.  For example, ```/some/js/file.js.map```.  Default: true
 
 ### Logging Examples
 
