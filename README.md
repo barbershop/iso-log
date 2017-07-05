@@ -11,7 +11,7 @@ yarn add iso-log
 ## Usage
 
 ```javascript
-const log = require('iso-log);
+const log = require('iso-log');
 log.setOptions({
 	level: 'debug',
 	trace: true,
