@@ -28,8 +28,8 @@ module.exports = class Log {
 			},
 			log: {
 				i: 2,
-				hex: '#000000',
-				hexFallBack: 'black',
+				hex: '#404040',
+				hexFallBack: 'gray',
 				bgHex: null,
 				bgHexFallBack: null
 			},
