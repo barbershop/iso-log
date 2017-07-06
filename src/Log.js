@@ -83,10 +83,10 @@ module.exports = class Log {
 			this.useTrace = true;
 		}
 
-		if (options.useTrace === false) {
-			this.useTrace = false;
+		if (options.useSourcemaps === false) {
+			this.useSourcemaps = false;
 		} else {
-			this.useTrace = true;
+			this.useSourcemaps = true;
 		}
 	}
 
