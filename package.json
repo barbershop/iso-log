@@ -1,6 +1,6 @@
 {
   "name": "iso-log",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "An isomorphic logger with sugar on top.",
   "repository": {
 		"type": "git",

@@ -139,7 +139,10 @@ module.exports = class Log {
 					// default noop
 					let consoleMethod = () => {};
 					if (typeof console !== 'undefined') {
-						if (typeof console[level] !== 'undefined') {
+						if (!CLIENT && level === 'debug' && typeof console.log !== 'undefined') {
+							// Node has a dummy 'debug' console method (in v8) that doesn't print anything to console.  Use console.log instead
+							consoleMethod = console.log;
+						} else if (typeof console[level] !== 'undefined') {
 							consoleMethod = console[level];
 						} else if (typeof console.log !== 'undefined') {
 							consoleMethod = console.log;
