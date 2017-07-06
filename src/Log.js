@@ -146,9 +146,11 @@ module.exports = class Log {
 						}
 					}
 
-					const aboutStr = callerFunc
+					let aboutStr = callerFunc
 						? `(${level.toUpperCase()} | ${now} | ${callerFunc} | ${thingType}): `
 						: `(${level.toUpperCase()} | ${now} | ${thingType}): `;
+
+					aboutStr = this.decorateLogMessage(level, aboutStr);
 
 					const colorizedLevel = this.colorize(level, aboutStr);
 
@@ -432,5 +434,36 @@ module.exports = class Log {
 		}
 
 		this.originalPositionQueue[fullSource] = [];
+	}
+
+	decorateLogMessage(level, msg) {
+		let logStr = msg;
+		switch (level) {
+			case 'info':
+				logStr = 'ℹ️  ' + msg;
+				break;
+
+			case 'debug':
+				logStr = '❇️  ' + msg;
+				break;
+
+			case 'warn':
+				logStr = '⚠️  ' + msg;
+				break;
+
+			case 'error':
+			case 'crit':
+			case 'fatal':
+				logStr = '💥  ' + msg;
+				break;
+
+			case 'superInfo':
+				logStr = '💈 💈 💈  ' + msg;
+				break;
+
+			default:
+				break;
+		}
+		return logStr;
 	}
 };
