@@ -54,9 +54,10 @@ log
 info
 warn
 error
+superInfo
 ```
 
-If the level specified is ```info```, then ```info```, ```warn```, and ```error``` logs would be written to the console.  ```trace``` and ```debug``` logs would NOT be written to the console.
+If the level specified is ```info```, then ```info```, ```warn```, ```error```, and ```superInfo``` logs would be written to the console.  ```trace``` and ```debug``` logs would NOT be written to the console.
 
 ```useTrace``` - Whether to run a trace which will add the file and line number.  Default: true
 
@@ -71,6 +72,7 @@ log.log('log at level log');
 log.info('log at level info');
 log.warn('log at level warn');
 log.error('log at level error');
+log.superInfo('log at level error');
 
 log.crit('log at level error'); // alias of 'error'
 log.fatal('log at level error'); // alias of 'error'

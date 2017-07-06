@@ -53,6 +53,13 @@ module.exports = class Log {
 				hexFallBack: 'red',
 				bgHex: null,
 				bgHexFallBack: null
+			},
+			superInfo: {
+				i: 6,
+				hex: '#0033cc',
+				hexFallBack: 'cyan',
+				bgHex: null,
+				bgHexFallBack: null
 			}
 		};
 
@@ -338,6 +345,10 @@ module.exports = class Log {
 
 	fatal() {
 		this.doLog('error', arguments);
+	}
+
+	superInfo() {
+		this.doLog('superInfo', arguments);
 	}
 
 	getSource({ sourceRoot, sourceFile, mapFile, lineNumber, position }) {
