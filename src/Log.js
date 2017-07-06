@@ -230,21 +230,21 @@ module.exports = class Log {
 
 			colorizedStr = [`%c${str}`, style];
 		} else {
-			if (chalk.hex) {
-				if (this.levels[level].bgHex) {
-					colorizedStr = chalk.bgHex(this.levels[level].bgHex)(colorizedStr);
-				}
-				if (this.levels[level].hex) {
-					colorizedStr = chalk.hex(this.levels[level].hex)(colorizedStr);
-				}
-			} else {
-				if (this.levels[level].bgHexFallBack) {
-					colorizedStr = chalk[this.levels[level].bgHexFallBack](colorizedStr);
-				}
-				if (this.levels[level].hexFallBack) {
-					colorizedStr = chalk[this.levels[level].hexFallBack](colorizedStr);
-				}
+			// if (chalk.hex) {
+			// 	if (this.levels[level].bgHex) {
+			// 		colorizedStr = chalk.bgHex(this.levels[level].bgHex)(colorizedStr);
+			// 	}
+			// 	if (this.levels[level].hex) {
+			// 		colorizedStr = chalk.hex(this.levels[level].hex)(colorizedStr);
+			// 	}
+			// } else {
+			if (this.levels[level].bgHexFallBack) {
+				colorizedStr = chalk[this.levels[level].bgHexFallBack](colorizedStr);
 			}
+			if (this.levels[level].hexFallBack) {
+				colorizedStr = chalk[this.levels[level].hexFallBack](colorizedStr);
+			}
+			// }
 			if (bold) {
 				colorizedStr = chalk.bold(colorizedStr);
 			}
