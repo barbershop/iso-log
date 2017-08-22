@@ -25,13 +25,13 @@ And in terminal:
 ## Installation
 
 ```
-yarn add iso-log
+yarn add @barbershopio/iso-log
 ```
 
 ## Usage
 
 ```javascript
-const log = require('iso-log');
+const log = require('@barbershopio/iso-log');
 log.setOptions({
 	level: 'debug',
 	useTrace: true,
