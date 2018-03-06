@@ -210,7 +210,7 @@ module.exports = function () {
 			if (hour < 10) {
 				hour = '0' + hour;
 			}
-			var minute = now.getHours();
+			var minute = now.getMinutes();
 			if (minute < 10) {
 				minute = '0' + minute;
 			}

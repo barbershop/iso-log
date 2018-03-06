@@ -200,7 +200,7 @@ module.exports = class Log {
 		if (hour < 10) {
 			hour = '0' + hour;
 		}
-		let minute = now.getHours();
+		let minute = now.getMinutes();
 		if (minute < 10) {
 			minute = '0' + minute;
 		}
