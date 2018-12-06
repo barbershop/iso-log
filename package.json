@@ -1,6 +1,6 @@
 {
   "name": "@barbershopio/iso-log",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "An isomorphic logger with sugar on top.",
   "repository": {
     "type": "git",
