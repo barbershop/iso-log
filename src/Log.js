@@ -192,7 +192,7 @@ module.exports = class Log {
 		if (month < 10) {
 			month = '0' + month;
 		}
-		let day = now.getDate() + 1;
+		let day = now.getDate();
 		if (day < 10) {
 			day = '0' + day;
 		}

@@ -202,7 +202,7 @@ module.exports = function () {
 			if (month < 10) {
 				month = '0' + month;
 			}
-			var day = now.getDate() + 1;
+			var day = now.getDate();
 			if (day < 10) {
 				day = '0' + day;
 			}
